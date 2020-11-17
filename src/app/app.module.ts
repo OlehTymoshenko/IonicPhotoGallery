@@ -8,7 +8,7 @@ import { StatusBar } from '@ionic-native/status-bar/ngx';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { FCM } from '@ionic-native/fcm/ngx';
+import { FirebaseMessaging } from '@ionic-native/firebase-messaging/ngx';
 
 @NgModule({
   declarations: [AppComponent],
@@ -19,7 +19,7 @@ import { FCM } from '@ionic-native/fcm/ngx';
     SplashScreen,
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy },
     AlertController,
-    FCM
+   // FirebaseMessaging
   ],
   bootstrap: [AppComponent]
 })

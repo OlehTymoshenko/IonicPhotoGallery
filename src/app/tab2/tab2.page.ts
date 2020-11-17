@@ -7,7 +7,8 @@ import { Plugins,
          Capacitor
         } from '@capacitor/core'; 
 import { AlertController } from '@ionic/angular';
-import { FCM } from '@ionic-native/fcm/ngx';
+//import { FirebaseMessaging } from '@ionic-native/firebase-messaging/ngx';
+
 
 const { PushNotifications } = Plugins;
 
@@ -20,7 +21,7 @@ export class Tab2Page {
 
   constructor(
     public photoService : PhotoService,
-    private fcm : FCM
+  //  private messagingFB : FirebaseMessaging
   ) {}
 
   async ngOnInit() {
@@ -33,7 +34,7 @@ export class Tab2Page {
   }
   
   private async setUpPushNotifications() {
-    this.fcm.subscribeToTopic("all");
-    alert(await this.fcm.getToken());
+    //this.messagingFB.subscribe("all");
+   // alert(await this.messagingFB.getToken() );
   }
 }

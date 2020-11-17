@@ -11,8 +11,11 @@ apply from: "../capacitor-cordova-android-plugins/cordova.variables.gradle"
 dependencies {
 
     implementation "com.google.firebase:firebase-analytics:18.0.+"
+    implementation "com.google.firebase:firebase-messaging:21.0.+"
+    implementation "androidx.core:core:1.3.+"
+    implementation "me.leolin:ShortcutBadger:1.1.22@aar"
 }
-apply from: "../../node_modules/cordova-plugin-fcm-with-dependecy-updated/src/android/FCMPlugin.gradle"
+
 
 if (hasProperty('postBuildExtras')) {
   postBuildExtras()
